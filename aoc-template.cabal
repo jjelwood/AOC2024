@@ -1,0 +1,121 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5a289a5751905314f1c1107423a692f259ce9f6d5b5b27a2f0a7f179b6472c6d
+
+name:           aoc-template
+version:        2023.0
+description:    A template for Advent of Code projects in Haskell
+homepage:       https://github.com/jjelwood/aoc2021#readme
+bug-reports:    https://github.com/jjelwood/aoc2021/issues
+author:         JJ Elwood
+maintainer:     jjelwood2005@gmail.com
+copyright:      2024 JJ Elwood
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/jjelwood/aoc2021
+
+library
+  exposed-modules:
+      Days.Day01
+      Days.Day02
+      Days.Day03
+      Days.Day04
+      Days.Day05
+      Days.Day06
+      Days.Day07
+      Days.Day08
+      Days.Day09
+      Days.Day10
+      Days.Day11
+      Days.Day12
+      Days.Day13
+      Days.Day14
+      Days.Day15
+      Days.Day16
+      Days.Day17
+      Days.Day18
+      Days.Day19
+      Days.Day20
+      Days.Day21
+      Days.Day22
+      Days.Day23
+      Days.Day24
+      Days.Day25
+      Program.Color
+      Program.RunDay
+      Util.Pair
+      Util.Parsers
+      Util.Util
+  other-modules:
+      Paths_aoc_template
+  hs-source-dirs:
+      src
+  default-extensions:
+      LambdaCase
+      MultiWayIf
+      RecordWildCards
+      OverloadedRecordDot
+      OverloadedStrings
+      GADTs
+      GHC2021
+  build-depends:
+      MemoTrie
+    , ansi-terminal
+    , attoparsec
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , matrix
+    , more-containers
+    , mtl
+    , optparse-applicative
+    , parser-combinators
+    , search-algorithms
+    , text
+    , time
+    , vector
+  default-language: Haskell2010
+
+executable aoc-template-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_aoc_template
+  hs-source-dirs:
+      app
+  default-extensions:
+      LambdaCase
+      MultiWayIf
+      RecordWildCards
+      OverloadedRecordDot
+      OverloadedStrings
+      GADTs
+      GHC2021
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N4 -with-rtsopts=-qa -with-rtsopts=-C0 -funfolding-use-threshold=16 -fexcess-precision -optc-O3 -optc-ffast-math -O2
+  build-depends:
+      MemoTrie
+    , ansi-terminal
+    , aoc-template
+    , attoparsec
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , matrix
+    , more-containers
+    , mtl
+    , optparse-applicative
+    , parser-combinators
+    , search-algorithms
+    , text
+    , time
+    , vector
+  default-language: Haskell2010
