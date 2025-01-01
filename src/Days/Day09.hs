@@ -78,4 +78,3 @@ moveFileChunk (group:groups) fileGroup
 
 partB :: Input -> OutputB
 partB = sum . Vec.map ((*) <$> fst <*> fromRight 0 . snd) . Vec.indexed . moveFileChunks
--- partB = undefined
